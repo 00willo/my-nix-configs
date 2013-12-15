@@ -2,25 +2,30 @@
 set ff=unix
 
 " " always show the status line
-:set laststatus=2
+set laststatus=2
 
 " make tab stop (tab width in spaces) smaller
-:set ts=4
+set ts=4
 
 " " make shift width (spaces for indenting << >>) smaller
-:set sw=4
+set sw=4
 
 " syntax highlighting in color
-:syntax enable
+syntax enable
 
 " show the ruler by default
 set ruler
 
 " highlight all matches for last used search pattern
-:set hls
+set hls
 
 " " automatic indenting
-:set ai
+set ai
 
 " " smart indenting
-:set si
+set si
+
+set expandtab
+set smarttab
+
+set history=250
