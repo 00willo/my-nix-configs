@@ -1,0 +1,26 @@
+" " make unix (NL) the default file format
+set ff=unix
+
+" " always show the status line
+:set laststatus=2
+
+" make tab stop (tab width in spaces) smaller
+:set ts=4
+
+" " make shift width (spaces for indenting << >>) smaller
+:set sw=4
+
+" syntax highlighting in color
+:syntax enable
+
+" show the ruler by default
+set ruler
+
+" highlight all matches for last used search pattern
+:set hls
+
+" " automatic indenting
+:set ai
+
+" " smart indenting
+:set si
