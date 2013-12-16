@@ -5,13 +5,17 @@ set ff=unix
 set laststatus=2
 
 " make tab stop (tab width in spaces) smaller
-set ts=4
+"set ts=4
+set tabstop=8
+set softtabstop=4
 
 " " make shift width (spaces for indenting << >>) smaller
-set sw=4
+"set sw=4
+set shiftwidth=4
 
 " syntax highlighting in color
 syntax enable
+syntax on
 
 " show the ruler by default
 set ruler
@@ -29,3 +33,9 @@ set expandtab
 set smarttab
 
 set history=250
+
+set showmode
+set autoindent
+filetype indent on
+filetype on
+filetype plugin on
