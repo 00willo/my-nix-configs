@@ -1,7 +1,7 @@
-" " make unix (NL) the default file format
+" make unix (NL) the default file format
 set ff=unix
 
-" " always show the status line
+" always show the status line
 set laststatus=2
 
 " make tab stop (tab width in spaces) smaller
@@ -9,7 +9,7 @@ set laststatus=2
 set tabstop=8
 set softtabstop=4
 
-" " make shift width (spaces for indenting << >>) smaller
+" make shift width (spaces for indenting << >>) smaller
 "set sw=4
 set shiftwidth=4
 
@@ -21,21 +21,36 @@ syntax on
 set ruler
 
 " highlight all matches for last used search pattern
-set hls
+"set hls
+set hlsearch
 
-" " automatic indenting
+" automatic indenting
 set ai
 
-" " smart indenting
+" smart indenting
 set si
+
+" ignore case when searching
+set ignorecase
+set smartcase
+
+" show matching brackets when text indicator is over them
+set showmatch
+
+" no sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 set expandtab
 set smarttab
 
-set history=250
+" sets how many lines of history VIM has to remember
+set history=750
 
 set showmode
 set autoindent
-filetype indent on
 filetype on
+filetype indent on
 filetype plugin on
