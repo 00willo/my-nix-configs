@@ -8,3 +8,23 @@ echo
 echo -e "Zombie Processes: " ; if ( ps aux | awk "BEGIN{ total = 0; }{if (/$8 == \"Z\") {print \$2, \$11; total += 1; } } END{exit total}" ); then echo -e "none\n";fi
 echo -ne 'Current DTG: '
 date
+
+# Better bash history - ref: http://blog.sanctum.geek.nz/better-bash-history/
+
+#Append history instead of rewriting it
+shopt -s histappend
+# Set sizes
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+# Don't store these specific lines
+HISTIGNORE="ls:bg:fg:history"
+# This also get ignorespace and ignoredups
+HISTCONTROL=ignoreboth
+# Records timestamp - based on ref comments, maybe not needed, haven't really work out where timestamp is stored or how to retrieve yet
+HISTTIMEFORMAT='%F %T '
+# Use one command per line
+shopt -s cmdhist
+# Store history immediately
+PROMPT_COMMAND='history -a'
+
+#. ./.bash_functions
