@@ -54,3 +54,6 @@ set autoindent
 filetype on
 filetype indent on
 filetype plugin on
+
+"Run pyflakes on files after you save them
+au BufWritePost *.py !pyflakes % 
