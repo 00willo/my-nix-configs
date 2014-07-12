@@ -1,6 +1,7 @@
 #Add .bash_profile stuff here
 w
-echo screen -ls
+echo
+screen -ls
 ps auwx |grep -i screen |grep -v grep
 echo
 #klist
