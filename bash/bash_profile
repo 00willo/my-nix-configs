@@ -6,7 +6,7 @@ ps auwx |grep -i screen |grep -v grep
 echo
 #klist
 echo 
-echo -e "Zombie Processes: " ; if ( ps aux | awk "BEGIN{ total = 0; }{if (/$8 == \"Z\") {print \$2, \$11; total += 1; } } END{exit total}" ); then echo -e "none\n";fi
+echo -e "Zombie Processes: " ; if ( ps aux | awk "BEGIN{ total = 0; }{if (\$8 == \"Z\") {print \$2, \$11; total += 1; } } END{exit total}" ); then echo -e "none\n";fi
 echo -ne 'Current DTG: '
 date
 
